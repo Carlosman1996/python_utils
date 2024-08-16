@@ -92,7 +92,7 @@ class JsonFileOperations:
     def write_file(file_path, data):
         DirectoryOperations.create_dir_by_file_path(file_path)
         with open(file_path, 'w', encoding="utf-8") as json_obj:
-            json.dump(string, json_obj, ensure_ascii=False, indent=4)
+            json.dump(data, json_obj, ensure_ascii=False, indent=4)
             json_obj.close()
 
     @staticmethod
